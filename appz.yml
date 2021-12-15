@@ -1,0 +1,26 @@
+app:
+    name: Hello Node
+    code: hellonode
+    notify: mniju@ecloudcontrol.com
+
+build:
+    version: 0.1
+    env: DEV
+    build_file: none
+    output_files: output/*.zip
+    image_template: node-17.2
+
+
+deploy:
+    context: minnaniju/DEV
+    replicas: 1
+    port:
+    - 8080
+    - 80
+
+
+properties:
+    page_title: "React-bootstrap + nodejs-express App"
+    ##site_url: "https://hellonodejs.appzclient.com/"
+    revision: 19
+    page_color: Blue
